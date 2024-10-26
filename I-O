@@ -1,0 +1,99 @@
+What is File I/O?
+File I/O stands for Input/Output. It’s how we can read
+information from files or write information into files, just 
+like how you might read a book or write in your diary!
+
+How Do We Use Files in C?
+In C, we use special functions to handle files. Think of these
+ functions as magic spells that help us open, read, write, and close files!
+Here are some important ones:
+
+Opening a File (fopen):
+This is like opening a book to start reading. We tell the
+program which book (file) we want to read from or write to.
+Example:
+c
+FILE *file = fopen("myfile.txt", "r"); // Opens a file to read
+Closing a File (fclose):
+
+After we're done reading or writing, we need to close
+the book. This helps keep everything neat and saves our work.
+Example:
+c
+fclose(file); // Closes the file
+Reading from a File (fread or fscanf):
+
+This is like looking at the words in your book.
+We can read data from the file into our program.
+Example:
+c
+int number;
+fscanf(file, "%d", &number); // Reads an integer from the file
+Writing to a File (fwrite or fprintf):
+
+This is like writing a new story in your diary. We can put data into the file.
+Example:
+c
+fprintf(file, "Hello, World!\n"); // Writes a message into the file
+Building a Simple Program
+Let’s build a tiny program that reads your name from
+a file and writes a welcome message to another file!
+
+Steps:
+Create a file called name.txt and write your name inside.
+Write a C program that does the following:
+Opens name.txt to read your name.
+Opens another file called greeting.txt to write a welcome message.
+Sample Code:
+c
+#include <stdio.h>
+
+int main() {
+    // Step 1: Open the name file for reading
+    FILE *nameFile = fopen("name.txt", "r");
+    if (nameFile == NULL) {
+        printf("Could not open name.txt\n");
+        return 1; // Exit if the file can't be opened
+    }
+
+    // Step 2: Read the name from the file
+    char name[50];
+    fscanf(nameFile, "%s", name);
+    fclose(nameFile); // Close the name file
+
+    // Step 3: Open the greeting file for writing
+    FILE *greetingFile = fopen("greeting.txt", "w");
+    if (greetingFile == NULL) {
+        printf("Could not open greeting.txt\n");
+        return 1; // Exit if the file can't be opened
+    }
+
+    // Step 4: Write the greeting message
+    fprintf(greetingFile, "Hello, %s! Welcome!\n", name);
+    fclose(greetingFile); // Close the greeting file
+
+    return 0; // End of the program
+}
+
+
+
+
+What Happens in This Program?
+The program first opens name.txt to read your name. 
+If it can’t find the file, it tells you something went wrong.
+Then, it reads your name and closes the file.
+Next, it opens greeting.txt to write. If this file 
+can’t be opened, it also tells you.
+Finally, it writes a nice greeting with your name and closes the greeting file.
+Why Is This Important?
+Learning how to work with files helps you save your games, 
+write stories, or keep track of scores! It’s a super important skill for programming.
+
+If you have any questions or want to try something different, let me know!
+
+
+
+
+
+
+

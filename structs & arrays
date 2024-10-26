@@ -1,0 +1,59 @@
+What is an Array?
+Imagine you have a row of cubbyholes where each cubby can
+hold one item. Let’s say you’re organizing your favorite
+candy bars, and you want to keep them all in one place. You
+don’t want just one cubby; you want a row of cubbies where 
+each one holds a different candy bar.
+
+In programming, an array works just like this row of cubbyholes:
+
+It’s a way to store multiple pieces of the same kind of
+data (like numbers, letters, or names) all in one place.
+Each item has its own spot in the array, which we call an index. We start
+counting from 0, so the first item is in position 0, the second in position 1, and so on.
+
+Example of an Array
+Here’s what an array of favorite candy bars might look like in C:
+c
+char *candyBars[] = {"Snickers", "KitKat", "M&M", "Twix"};
+Now, if you want to know what’s in the second cubby, you can
+ask for candyBars[1], which would be "KitKat"!
+
+What is a Struct?
+Now, let’s say you want to store more than just the candy
+bar names. Maybe you also want to keep track of the type of candy
+and its price. You can’t just use an array for this 
+because each candy has different kinds of information.
+
+This is where structs come in! A struct is like a super
+ cubby where you can put all related information together. It’s a 
+ way to bundle different pieces of data under one roof so they stay organized.
+
+Example of a Struct
+Let’s create a struct to store a candy’s name, type, and price:
+c
+struct Candy {
+    char *name;
+    char *type;
+    float price;
+};
+
+
+
+Now, each time you create a Candy, it will have a name, type, and
+ price all together in one place. Here’s how you could use it:
+c
+struct Candy myCandy = {"Snickers", "Chocolate", 1.50};
+You can access each part of myCandy by calling it like this:
+
+myCandy.name (which gives you "Snickers")
+myCandy.type (which gives you "Chocolate")
+myCandy.price (which gives you 1.50)
+
+
+
+In Summary:
+Array: A row of cubbies to store multiple items of the same type.
+Struct: A single super cubby to hold related items of different types together.
+Arrays and structs are great ways to organize and store data, whether
+ it's candy, game scores, or anything else you need to keep track of in a program!

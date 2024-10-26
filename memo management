@@ -1,0 +1,29 @@
+What is Memory in Your Computer?
+Imagine your computer’s memory as a giant bookshelf with lots of
+ little cubbies, each one ready to store something important—like a 
+ number, a letter, or a piece of information. But there are only so
+  many cubbies, so you have to be careful about how much you put on that shelf.
+
+Using malloc to Borrow Memory
+Sometimes, you need a special amount of space on the shelf, but
+ you don’t know how much until the program is running. For this, we
+  use something called malloc, which is like borrowing some space on
+   the shelf. malloc stands for "memory allocation," and it gives you
+    a chunk of cubbies that your program can use to store data, even if it’s a big amount.
+
+Why free is Important
+Once you’re done using that borrowed space, you don’t just leave your 
+stuff there forever. You have to use free to tell your program, “Okay, I’m done
+ with this space. You can have it back.” If you don’t return it, it’s like leaving
+  all your things on the bookshelf and never cleaning up! This would fill
+   up your shelf until there’s no room left, and your computer might run
+    out of memory space. This is what we call a memory leak—the computer 
+    loses track of that space because you didn’t give it back.
+
+So, in Short:
+malloc: Borrow some memory space when you need it.
+free: Return the space when you’re done, so there’s room for new things.
+Memory Leaks: If you don’t return memory, it can get lost, filling up the 
+shelf until there’s no more space!
+Memory management is all about being responsible with your
+ computer’s “shelf space” so everything runs smoothly!

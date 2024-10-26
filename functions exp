@@ -1,0 +1,78 @@
+1. Function Syntax
+In C, a function has a specific structure:
+c
+return_type function_name(parameter_list) {
+    // function body
+}
+Example: Here’s a function that takes no
+ parameters and returns void (no value):
+c
+void say_hello() {
+    printf("Hello, World!\n");
+}
+
+
+
+2. Declaring, Defining, and Calling Functions
+Declaration: Before you use a function, declare it at the beginning of 
+your code (like a header). This tells the compiler about
+ the function's name, return type, and parameters. For example:
+c
+void say_hello();
+Definition: The function definition provides the actual code that 
+the function will execute, as shown in the say_hello() example above.
+Calling: Call the function in main() or another function by using its
+ name and passing any required arguments. For example:
+c
+int main() {
+    say_hello();
+    return 0;
+
+
+
+}
+3. Parameters and Return Types
+Functions can take parameters (inputs) and can return a value.
+Example 1: Function with Parameters but No Return:
+c
+Copy code
+void print_sum(int a, int b) {
+    printf("The sum is: %d\n", a + b);
+}
+You can call this with:
+c
+
+print_sum(5, 7);
+Example 2: Function with Parameters and a Return Type:
+c
+int add(int a, int b) {
+    return a + b;
+}
+You can use this in main() by capturing the returned value:
+c
+Copy code
+int main() {
+    int result = add(5, 7);
+    printf("The result is: %d\n", result);
+    return 0;
+}
+
+
+
+4. Simple Practice Functions
+Try creating a greeting function or an addition function to print
+ the sum of two numbers. For example:
+c
+
+int add_two_numbers(int x, int y) {
+    return x + y;
+}
+These examples will give you a practical foundation in functions
+,Let me know if you’d like more exercises or explanations on specific parts of this!
+
+
+
+
+
+
+
